@@ -3,16 +3,13 @@ ext {
             spring: [
                 boot_actuator: 'org.springframework.boot:spring-boot-starter-actuator',
                 boot_web: 'org.springframework.boot:spring-boot-starter-web',
-                eureka_client: 'org.springframework.cloud:spring-cloud-starter-eureka'
+                eureka_client: 'org.springframework.cloud:spring-cloud-starter-eureka',
+                zuul: 'org.springframework.cloud:spring-cloud-starter-zuul'
             ],
             test: [
                     junit: 'junit:junit:4.12',
                     assertj: 'org.assertj:assertj-core:3.3.0',
                     mockito: 'org.mockito:mockito-core:2.0.42-beta'
-            ],
-            springfox: [
-                    swagger_ui: 'io.springfox:springfox-swagger-ui:2.3.1',
-                    swagger2: 'io.springfox:springfox-swagger2:2.3.1'
             ]
     )
 }
