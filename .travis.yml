@@ -1,11 +1,16 @@
 language: Java
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
+deploy:
+  provider: heroku
+  api_key:
+    secure: VaH3f1cs1snA7hOD6mUkYh20VXkGBZL4JaBKY+c29bsNbL3gH1vL80LgclzpIXl6+2EflEx6EMJYpTjTZM9Q0ZD2itii0o+p/5f+X//xfGQsoptGtSZIuI+kPBjWfVrjDhCd0zmmi0LSZ6luDg5u5NLt7GNYXJsD3Mz72+/Nd6MuzuBjgzXnMXpZpMc5ubbemZ+WvFePDaOFiRvmY+NlYyUJIUkhPSFMlwbikUfDSTm9qZdMpznEnjyolHDPdQTs5hOounUwavnOzZ8KzK69avw9jW5vJap5DxxRsOkxBU60f8RcsK5onlxZfOh0FZ7obYcpxbEVhTvYBPnYf7Rms2rp/dOq/8lF3hnjt1AN1fWfMhq/yE6PGsy6+oYgUPf39X/hzZc91W1TXFKNgBpZ4ARCtubBNPVlH6SQfPDr7vp9Kod1AMQw3zSHTa1TaY7ePiZbW/PZTXQl65Du3wexJVYT322lOJHsWVhKqdpQ6VnBxidYOnprVFrI4YW1r2HG/T0hP/pH0a5aEpKH7h+H+oG1urIK8Ow8dk69SmrKrmfkhYuDylXBaPVC9nLa6kiNXQcH2imLCqBSUr28GBWVoImjHy5C/9E3JAwzCY+MVbcADE95af8VQWjj+E7sqGApNRReUg2HEtiT/Qh2jhw1elb08IyBK3BhWZYPulEYEOw=
+  app: trading-office-api-staging
+  on:
+    repo: spolnik/trading-office-api-gateway
