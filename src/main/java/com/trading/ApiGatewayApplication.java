@@ -15,16 +15,16 @@ import static springfox.documentation.builders.PathSelectors.regex;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableSwagger2
-public class TemplateApplication {
+public class ApiGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TemplateApplication.class, args);
+        SpringApplication.run(ApiGatewayApplication.class, args);
     }
 
     @Bean
-    public Docket templateApi() {
+    public Docket apiGatewayApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("template")
+                .groupName("api-gateway")
                 .apiInfo(apiInfo())
                 .select()
                 .paths(regex("/api.*"))
@@ -33,8 +33,8 @@ public class TemplateApplication {
 
     private static ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Template REST Service")
-                .description("Template REST Service")
+                .title("Api Gateway REST Service")
+                .description("Api Gateway REST Service")
                 .contact("Jacek Spólnik")
                 .license("Apache License Version 2.0")
                 .version("1.0")

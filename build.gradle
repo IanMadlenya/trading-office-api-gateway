@@ -29,8 +29,8 @@ apply from: "$rootDir/gradle/jacoco.gradle"
 sonarqube {
     properties {
         property "sonar.host.url", "https://sonar-nprogramming.rhcloud.com"
-        property "sonar.projectKey", "trading-office-template-service"
-        property "sonar.projectName", "Trading Office - Template Service"
+        property "sonar.projectKey", "trading-office-api-gateway"
+        property "sonar.projectName", "Trading Office - Api Gateway"
     }
 }
 
@@ -64,7 +64,7 @@ dependencies {
 }
 
 jar {
-    baseName = 'trading-office-template-service'
+    baseName = 'trading-office-api-gateway'
     version = '1.0.0'
 }
 

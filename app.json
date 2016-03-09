@@ -1,6 +1,6 @@
 {
-  "name": "Template Service",
-  "description": "Template Service.",
+  "name": "Api Gateway",
+  "description": "Api Gateway.",
   "website": "https://github.com/spolnik/trading-office",
   "success_url": "/health",
   "env": {
